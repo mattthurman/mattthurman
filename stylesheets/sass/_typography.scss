@@ -1,0 +1,82 @@
+// @font-face & Font Stacks
+// ==========================================================================
+
+// Insert @import from Google, Typekit, Fonts.com, etc.
+
+// Font Name
+
+@include font-face("Font Name",
+  font-files(
+    "FontName.ttf",
+    "FontName.woff",
+    "FontName.svg"),
+    "FontName.eot"
+);
+
+// Font Stacks
+
+%font-body {font-family: Helvetica, Arial, sans-serif;}
+%font-body-bold {font-family: Helvetica, Arial, sans-serif; font-weight: bold;}
+%font-headings {font-family: Helvetica, Arial, sans-serif;}
+%font-headings-bold {font-family: Helvetica, Arial, sans-serif; font-weight: bold;}
+
+// Global Font
+// ==========================================================================
+
+html {
+  font-size: 100%; // Change this if you want your root font-size bigger/smaller
+  line-height: 1.5;
+}
+
+body {
+  @extend %font-body;
+  font-size: 1.2em; // Set global font-size here
+  line-height: 1.6em; // Set global line-height here
+  -webkit-font-smoothing: subpixel-antialiased; // Fixes the inconsistent font-weight in Safari
+}
+
+// Icon Font
+// ==========================================================================
+
+@include font-face("Icomoon",
+  font-files(
+    "Icomoon.ttf",
+    "Icomoon.woff",
+    "Icomoon.svg"
+  ),
+  "Icomoon.eot"
+);
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  content: attr(data-icon);
+  font-family: 'Icomoon';
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Headings
+// ==========================================================================
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+// Misc
+// ==========================================================================
+
+p {
+
+}
+
+ul, ol {
+
+}
+
+blockquote {
+
+}
