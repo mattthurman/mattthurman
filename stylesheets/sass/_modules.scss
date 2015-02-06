@@ -5,7 +5,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -13,32 +13,35 @@ hr {
 // Google Maps
 // ==========================================================================
 
-.map *,
-.map *:before,
-.map *:after {
-  @extend %default-box-model;
-  & img {max-width: none;}
+// Don't reset the *:before & *:after
+.map * {
+  box-sizing: content-box;
+  & img {
+    max-width: none;
+  }
 }
 
-// Ancient Browser Alert
+// Browser Upgrade Prompt
 // ==========================================================================
 
-.ancient {
-  background: #666666;
-  border-bottom: 1px solid #ffffff;
-  color: #ffffff;
-  margin: 0;
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// Skip to Content
+// ==========================================================================
+
+.skip:focus {
+  background-color: #000;
+  clip: auto;
+  color: #fff;
+  height: auto;
   padding: 0.5em 1em;
   position: fixed;
     top: 0;
-    right: 0;
     left: 0;
-  text-align: center;
-  z-index: 1000000;
-}
-
-.ancient a,
-.ancient a:visited {
-  color: #ffffff;
-  text-decoration: underline;
+  width: auto;
 }

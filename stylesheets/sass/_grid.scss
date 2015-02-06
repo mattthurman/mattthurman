@@ -1,16 +1,24 @@
-// Apply box-sizing: border-box to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw
+// Apply box-sizing: border-box to all elements: http://bit.ly/1yDao1h
 *,
 *:after,
 *:before {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 html {
-
+  overflow-x: hidden;
 }
 
 body {
-  @include backface-visibility(hidden); // Fixes flickering of objects during CSS transitions
-  @include rotate3d(0, 0, 0, 0); // Fixes font-weight shifting during CSS transitions
   overflow-x: hidden;
+}
+
+// Main
+// ==========================================================================
+
+$main-width: 75em; // Change your main area width here
+
+.main {
+  margin: 0 auto;
+  max-width: $main-width;
 }

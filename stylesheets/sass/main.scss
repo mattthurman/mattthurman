@@ -1,18 +1,18 @@
-// Compass Imports
+// Vendor (Local)
 
-@import "compass"; // Includes CSS3, Typography, Utilities
-@import "compass/layout";
-@import "compass/reset";
+@import "vendor/normalize.css";
 
 // Sass Imports (Local)
 
 @import "bits";
 @import "grid";
 @import "typography";
+@import "icons";
 @import "links";
 @import "images";
 @import "tables";
 @import "forms";
+@import "buttons";
 @import "header";
 @import "nav";
 @import "footer";
