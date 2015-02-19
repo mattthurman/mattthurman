@@ -1,0 +1,21 @@
+.header {
+  padding: 4em 0 3em;
+}
+
+  .header a {
+    text-decoration: none;
+  }
+
+.header-title-lockup {
+  display: inline-block;
+  font-size: $base-size;
+  margin-bottom: 1.5em;
+  width: 50%;
+}
+
+.header-title {
+  color: $color-accent;
+  font-size: 2.5em;
+  line-height: 0.7em;
+  margin-bottom: 0;
+}

@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+
+	<section class="blog blog-full">
+	  <div class="container">
+	    <h1 class="large">Blog Post Title</h1>
+	      <div class="content"> 
+	      	<p class="blog-date"> <%= current_article.date.strftime('%b %e, %Y') %> </p>
+
+	       <%= yield %>
+
+	     	</div>
+		</div>
+	</section>
+
+<% end %>

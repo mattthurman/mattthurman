@@ -1,0 +1,116 @@
+// Apply box-sizing: border-box to all elements: http://bit.ly/1yDao1h
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+// Main
+// ==========================================================================
+
+$wrapper-width: 120em; // Change your main area width here
+
+.wrapper {
+  margin: 0 auto;
+  max-width: $wrapper-width;
+  padding: 0 6em;
+  @include under($goldilocks) {
+    padding: 0 4em;
+  }
+  @include under($babybear) {
+    padding: 0 2em;
+  }
+}
+
+.main {
+  @extend .wrapper;
+  margin: 0 auto;
+}
+
+// Portfolio Brief
+// ==========================================================================
+
+.briefs {
+  list-style-type: none;
+  font-size: 0;
+  padding-left: 0;
+}
+
+.brief {
+  display: inline-block;
+  font-size: $base-size;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  @include over($goldilocks) {
+    width: 49%;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @include under($goldilocks) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.brief-inner {
+  background-color: $color-base-lighter;
+  display: block;
+  padding-bottom: 62.5%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.brief-visual {
+  backface-visibility: hidden;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+    top: 0;
+    left: 0;
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 30;
+  .brief-inner:hover & {
+    top: -3.5em;
+    transform: scale(1);
+  }
+}
+
+.brief-description {
+  padding: 1em;
+  position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.brief-title {
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+// Portfolio View
+// ==========================================================================
+
+.views {
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left: 0;
+  @include over($mamabear ) {
+    width: 70%;
+  }
+}
+
+.view {
+  margin-bottom: 2%;
+}

@@ -1,0 +1,13 @@
+<section>
+  <h1 class="heading-large marginless">Piece: 7 Deadly Sins</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ullam labore, repellat nihil impedit excepturi! Ratione quos maiores sunt accusantium, hic vel nostrum doloremque dolorem placeat a odit id iure!</p>
+  <figure class="peice-hero">
+    <%= image_tag 'http://lorempixel.com/1600/1000/' %>
+  </figure>
+  <ul class="views">
+    <%= partial '../portfolio/partials/portfolio_view', locals: {description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero ante, elementum ut mauris eget, feugiat feugiat velit. Pellentesque at scelerisque arcu, eget pulvinar dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vestibulum.'} %>
+    <%= partial '../portfolio/partials/portfolio_view', locals: {description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero ante, elementum ut mauris eget, feugiat feugiat velit. Pellentesque at scelerisque arcu, eget pulvinar dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vestibulum.'} %>
+    <%= partial '../portfolio/partials/portfolio_view', locals: {description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero ante, elementum ut mauris eget, feugiat feugiat velit. Pellentesque at scelerisque arcu, eget pulvinar dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vestibulum.'} %>
+  </ul>
+  <p><%= link_to '< Back to Portfolio', '/' %></p>
+</section>

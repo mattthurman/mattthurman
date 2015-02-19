@@ -1,0 +1,41 @@
+.nav {
+  float: right;  
+}
+
+.nav-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.nav-link:active {
+  // font-size: 2em;
+}
+
+.nav-link a {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    &:after {
+      border-bottom: 1px solid currentColor;
+      bottom: -0.1em;
+    }
+  }
+  &:visited {
+
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+      bottom: -0.5em;
+      right: 0;
+      left: 0;
+    transition: all 0.2s ease-in-out;
+  }
+}
