@@ -63,6 +63,7 @@ body {
   @include font-base;
   color: $color-base;
   font-size: $base-size;
+  letter-spacing: 0.01em;
   line-height: 1.4; // Set global line-height here
 }
 
