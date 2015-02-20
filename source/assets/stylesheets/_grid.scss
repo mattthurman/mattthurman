@@ -49,6 +49,7 @@ $wrapper-width: 120em; // Change your main area width here
   font-size: $base-size;
   margin-right: 2%;
   margin-bottom: 2%;
+  text-align: center;
   @include over($goldilocks) {
     width: 49%;
     &:nth-child(2n) {
@@ -67,7 +68,20 @@ $wrapper-width: 120em; // Change your main area width here
   padding-bottom: 62.5%;
   overflow: hidden;
   position: relative;
-  text-align: center;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    z-index: 999;
+  }
+  &:hover:after {
+    box-shadow: inset 0 0 0 1.5em $color-base-lighter;
+  }
 }
 
 .brief-visual {
@@ -77,21 +91,29 @@ $wrapper-width: 120em; // Change your main area width here
   position: absolute;
     top: 0;
     left: 0;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 0.3s ease-in-out;
-  z-index: 30;
-  .brief-inner:hover & {
-    top: -3.5em;
+  .brief:hover & {
+    opacity: 0.8;
     transform: scale(1);
   }
 }
 
 .brief-description {
+  color: white;
+  font-size: 2em;
+  opacity: 0;
   padding: 1em;
   position: absolute;
+    top: 50%;
     right: 0;
-    bottom: 0;
     left: 0;
+  transform: translate(0,-50%) scale(0.95);
+  transition: all 0.2s ease-in-out;
+  .brief:hover & {
+    opacity: 1;
+    transform: translate(0,-50%) scale(1);
+  }
 }
 
 .brief-title {
