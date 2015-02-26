@@ -45,7 +45,6 @@ $wrapper-width: 120em; // Change your main area width here
 }
 
 .brief {
-  background-color: $color-base-lighter;
   display: inline-block;
   font-size: $base-size;
   margin-right: 1%;
@@ -70,27 +69,11 @@ $wrapper-width: 120em; // Change your main area width here
 }
 
 .brief-inner {
+  background-color: $color-base-lighter;
   display: block;
   padding-bottom: 62.5%;
   overflow: hidden;
   position: relative;
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    transition: box-shadow 0.3s ease-in-out;
-    z-index: 999;
-  }
-  &:hover {
-    background-color: black;
-  }
-  &:hover:after {
-    box-shadow: inset 0 0 0 1em $color-base-lighter;
-  }
 }
 
 .brief-visual {
@@ -100,29 +83,13 @@ $wrapper-width: 120em; // Change your main area width here
   position: absolute;
     top: 0;
     left: 0;
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-  .brief:hover & {
-    opacity: 0.4;
-    transform: scale(1);
-  }
 }
 
 .brief-description {
-  color: white;
-  font-size: 2em;
-  opacity: 0;
-  padding: 1em;
-  position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-  transform: translate(0,-50%) scale(0.95);
-  transition: all 0.2s ease-in-out;
-  .brief:hover & {
-    opacity: 1;
-    transform: translate(0,-50%) scale(1);
-  }
+  display: none;
+  // color: white;
+  // font-size: 2em;
+  padding: 0.9em;
 }
 
 .brief-title {
