@@ -49,7 +49,13 @@ $wrapper-width: 120em; // Change your main area width here
   font-size: $base-size;
   margin-right: 1%;
   margin-bottom: 1%;
+  position: relative;
   text-align: center;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+    z-index: 2;
+  }
   @include over($mamabear) {
     width: percentage(.98/3);
     &:nth-child(3n) {
@@ -66,6 +72,10 @@ $wrapper-width: 120em; // Change your main area width here
     margin-right: 0;
     width: 100%;
   }
+}
+
+.brief.subdued {
+
 }
 
 .brief-inner {
