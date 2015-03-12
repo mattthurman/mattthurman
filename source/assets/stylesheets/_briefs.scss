@@ -1,0 +1,193 @@
+// Portfolio Brief
+// ==========================================================================
+
+.briefs {
+  list-style-type: none;
+  font-size: 0;
+  padding-left: 0;
+}
+
+.brief {
+  display: inline-block;
+  font-size: $base-size;
+  position: relative;
+  @include over($mamabear) {
+    width: percentage(1/3);
+  }
+  @include between($mamabear, $babybear) {
+    width: percentage(1/2);
+  }
+  @include under($babybear) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.brief.subdued {
+  // transform: scale(0.8);
+}
+
+.brief-inner {
+  display: block;
+  padding-bottom: 62.5%;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: '';
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 4;
+  }
+  .brief:hover &:after {
+    opacity: 1;
+  }
+}
+
+  .brief-expeditions-7 {
+    color: #f05323;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#000, 0.2) 10%, rgba(#f05323, 0.1) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-hi-chew {
+    color: #0033a0;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#fff, 0.4) 10%, rgba(#c70091, 0.05) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-typographic-phrase {
+    color: #b33140;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#f0ebe1, 0.5) 10%, rgba(#b33140, 0.05) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-typographic-phrase {
+    color: #b33140;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#f0ebe1, 0.5) 10%, rgba(#b33140, 0.2) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-typographic-lights {
+    color: #fff;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#000, 0.4) 10%, rgba(#e56572, 0.2) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-arcadia-rebrand {
+    color: #fff;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#000, 0.1) 10%, rgba(#000, 0) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-7-deadly-sins {
+    color: #000;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#fff, 0.2) 10%, rgba(#000, 0.2) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-capital-cre {
+    color: #0cc6de;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#fff, 0.3) 10%, rgba(#0cc6de, 0.1) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-the-other-firm {
+    color: #dfa21f;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#f0e5c7, 0.5) 40%, rgba(#442a1b, 0.2) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-utah-jazz {
+    color: #000;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#fff, 0.5) 10%, rgba(#c73130, 0.3) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-saxton-horne {
+    color: #e2231a;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#000, 0.3) 10%, rgba(#e2231a, 0.2) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-architecture-week-logo {
+    color: #736a64;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#fff, 0.3) 10%, rgba(#feca38, 0.1) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  .brief-design-movements {
+    color: #3497a3;
+    &:hover .brief-inner:after {
+      background: linear-gradient(45deg, rgba(#fff, 0.8) 10%, rgba(#3497a3, 0.1) 100%);
+      box-shadow: inset 1em 0 0 0 currentColor;
+    }
+  }
+
+  
+
+
+
+
+.brief-visual {
+  backface-visibility: hidden;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+    top: 0;
+    left: 0;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05) translate(0, 0);
+  .brief:hover & {
+    transform: scale(1.05) translate(2%, 0);
+  }
+}
+
+.brief-description {
+  opacity: 0;
+  position: absolute;
+    bottom: 1em;
+    left: 1em;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+  .brief:hover & {
+    opacity: 1;
+    left: 2em;
+  }
+}
+
+.brief-title {
+  display: block;
+  font-size: 1.6em;
+  line-height: 1.1;
+  margin-bottom: 0;
+}

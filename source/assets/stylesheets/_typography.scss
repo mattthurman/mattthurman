@@ -33,7 +33,7 @@
 // Font Mixins
 
 @mixin font-base {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica', Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -43,13 +43,14 @@
 }
 
 @mixin font-alt {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: 'Nexa Slab Regular', 'Rokkitt', Georgia, serif;
+  font-weight: 400;
 }
 
 @mixin font-alt-bold {
   @include font-alt;
-  font-weight: bold;
+  font-family: 'Nexa Slab Bold', 'Rokkitt', Georgia, serif;
+  font-weight: 700;
 }
 
 // Global Font
@@ -60,6 +61,8 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   @include font-base;
   color: $color-base;
   font-size: $base-size;
@@ -71,17 +74,22 @@ body {
 // ==========================================================================
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rokkitt', serif;
   letter-spacing: 0.03em;
   margin-top: 0;
-  text-transform: uppercase;
   &.marginless {
     margin-bottom: 0;
+  }
+  .view-expeditions-7 & {
+    color: #f05323;
   }
 }
 
 h1 {
-  line-height: 0.9;
+  &.heading-large {
+    @include font-alt-bold;
+    font-size: 2em;
+    text-transform: lowercase;
+  }
 }
 
 // Misc
@@ -89,6 +97,7 @@ h1 {
 
 p {
   margin-top: 0;
+  max-width: 50em;
 }
 
 ul, ol {

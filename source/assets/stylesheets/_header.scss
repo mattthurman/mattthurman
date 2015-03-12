@@ -1,21 +1,25 @@
 .header {
-  padding: 4em 0 3em;
+  border-top: 0.5em solid $color-accent;
+  background-color: #fff;
+  padding: 3em 0 2em;
 }
 
-  .header a {
-    text-decoration: none;
-  }
+.header a {
+  text-decoration: none;
+}
 
 .header-title-lockup {
   display: inline-block;
   font-size: $base-size;
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
   width: 50%;
 }
 
 .header-title {
+  @include font-alt-bold;
   color: $color-accent;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 0.7em;
   margin-bottom: 0;
+  text-transform: uppercase;
 }

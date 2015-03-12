@@ -10,18 +10,19 @@ html {
 }
 
 body {
+  background-color: #282828;
   overflow-x: hidden;
 }
 
 // Main
 // ==========================================================================
 
-$wrapper-width: 120em; // Change your main area width here
+$wrapper-width: 108em; // Change your main area width here
 
 .wrapper {
   margin: 0 auto;
+  padding: 0 4em;
   max-width: $wrapper-width;
-  padding: 0 6em;
   @include under($goldilocks) {
     padding: 0 4em;
   }
@@ -35,90 +36,6 @@ $wrapper-width: 120em; // Change your main area width here
   margin: 0 auto;
 }
 
-// Portfolio Brief
-// ==========================================================================
-
-.briefs {
-  list-style-type: none;
-  font-size: 0;
-  padding-left: 0;
-}
-
-.brief {
-  display: inline-block;
-  font-size: $base-size;
-  margin-right: 1%;
-  margin-bottom: 1%;
-  position: relative;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    transform: scale(1.2);
-    z-index: 2;
-  }
-  @include over($mamabear) {
-    width: percentage(.98/3);
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
-  }
-  @include between($mamabear, $babybear) {
-    width: percentage(.99/2);
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-  @include under($babybear) {
-    margin-right: 0;
-    width: 100%;
-  }
-}
-
-.brief.subdued {
-
-}
-
-.brief-inner {
-  background-color: $color-base-lighter;
-  display: block;
-  padding-bottom: 62.5%;
-  overflow: hidden;
-  position: relative;
-}
-
-.brief-visual {
-  backface-visibility: hidden;
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.brief-description {
-  display: none;
-  // color: white;
-  // font-size: 2em;
-  padding: 0.9em;
-}
-
-.brief-title {
-  line-height: 1.1;
-  margin-bottom: 0;
-}
-
-// Portfolio View
-// ==========================================================================
-
-.views {
-  list-style-type: none;
-  margin: 0 auto;
-  padding-left: 0;
-  @include over($mamabear ) {
-    width: 70%;
-  }
-}
-
-.view {
-  margin-bottom: 2%;
+.container {
+  background-color: #fff;
 }

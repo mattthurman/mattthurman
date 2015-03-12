@@ -1,0 +1,67 @@
+// Portfolio Page
+// ==========================================================================
+
+.views {
+  padding: 0 8em;
+}
+
+.grid-row {
+  font-size: 0;
+  margin-bottom: 1%;
+}
+
+.grid-column {
+  display: inline-block;
+  font-size: $base-size;
+  margin-right: 1%;
+  vertical-align: top;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.grid-cell {
+  display: block;
+  width: 100%;
+  & > img,
+  & > video {
+    display: block;
+    width: 100%;
+  }
+  + .grid-cell {
+    margin-top: 3%;
+  }
+}
+
+// 2 Uneven Columns
+
+.grid-row-uneven {
+  .grid-column {
+    width: 32.4%;
+  }
+  .grid-column-larger {
+    width: 66.6%;
+  }
+}
+
+
+// 2 Even Columns
+
+.grid-row-halves {
+  .grid-column {
+    width: percentage(0.99/2);
+  }
+}
+
+// 3 Even Columns
+
+.grid-row-thirds {
+  .grid-column {
+    width: percentage(0.98/3);
+  }
+}
+
+
+.views-description {
+  padding: 4em 4em 6em;
+}
