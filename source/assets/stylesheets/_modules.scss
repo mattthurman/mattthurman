@@ -10,6 +10,40 @@ hr {
   padding: 0;
 }
 
+// Browser Window Frame
+// ==========================================================================
+
+.browser-framed {
+  border-radius: 0.5em 0.5em 0 0;
+  box-shadow: 0.2em 0.2em 1em rgba(#000, 0.03);
+  > * {
+    border-right: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+  }
+  &:before {
+    background-color: #ebebeb; 
+    background-image: image-url('browser-buttons.svg');
+    background-position: 0.7em 0.6em;
+    background-repeat: no-repeat;
+    background-size: 3.25em auto;
+    border-bottom: 1px solid #b7b7b7;
+    border-radius: 0.5em 0.5em 0 0;
+    content: '';
+    display: block;
+    height: 2em;
+    width: 100%;
+  }
+  &:after {
+    background-color: #ebebeb;
+    border-radius: 0 0 0.25em 0.25em;
+    border-top: 1px solid #b7b7b7;
+    content: '';
+    display: block;
+    height: 0.5em;
+    width: 100%;
+  }
+}
+
 // Google Maps
 // ==========================================================================
 
