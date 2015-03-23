@@ -1,13 +1,66 @@
-<section>
-  <h1 class="heading-large marginless">Piece: 7 Deadly Sins</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ullam labore, repellat nihil impedit excepturi! Ratione quos maiores sunt accusantium, hic vel nostrum doloremque dolorem placeat a odit id iure!</p>
-  <figure class="peice-hero">
-    <%= image_tag 'http://lorempixel.com/1600/1000/' %>
-  </figure>
-  <ul class="views">
-    <%= partial '../portfolio/partials/portfolio_view', locals: {description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero ante, elementum ut mauris eget, feugiat feugiat velit. Pellentesque at scelerisque arcu, eget pulvinar dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vestibulum.'} %>
-    <%= partial '../portfolio/partials/portfolio_view', locals: {description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero ante, elementum ut mauris eget, feugiat feugiat velit. Pellentesque at scelerisque arcu, eget pulvinar dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vestibulum.'} %>
-    <%= partial '../portfolio/partials/portfolio_view', locals: {description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero ante, elementum ut mauris eget, feugiat feugiat velit. Pellentesque at scelerisque arcu, eget pulvinar dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vestibulum.'} %>
-  </ul>
+<figure class="hero view-7-deadly-sins">
+  <%= image_tag 'portfolio/7-deadly-sins/hero.jpg' %>
+  <figcaption class="figcaption">
+    <h1 class="heading-large marginless">7 Deadly Sins Foldout</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ullam labore, repellat nihil impedit excepturi! Ratione quos maiores sunt accusantium, hic vel nostrum doloremque dolorem placeat a odit id iure!</p>
+  </figcaption>
+</figure>
+
+<section class="views view-7-deadly-sins">
+
+  <div class="grid-row grid-row">
+    <span class="grid-column">
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/open-1.jpg' %>
+      </div>
+    </span>
+  </div>
+
+  <div class="views-description">
+    <h2 class="marginless">Cinemagraphs</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+  </div>
+
+  <div class="grid-row grid-row-halves">
+    <span class="grid-column">
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/cover.jpg' %>
+      </div>
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/gluttony.jpg' %>
+      </div>
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/lust.jpg' %>
+      </div>
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/pride.jpg' %>
+      </div>
+    </span>
+    <span class="grid-column">
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/sloth.jpg' %>
+      </div>
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/envy.jpg' %>
+      </div>
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/greed.jpg' %>
+      </div>
+      <div class="grid-cell">
+        <%= image_tag 'portfolio/7-deadly-sins/wrath.jpg' %>
+      </div>
+    </span>
+  </div>
+
+  <div class="views-description">
+    <h2 class="marginless">Cinemagraphs</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+  </div>
+
+
+
+
+</section>
+
   <p><%= link_to '< Back to Portfolio', '/' %></p>
 </section>
