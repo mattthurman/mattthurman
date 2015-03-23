@@ -32,8 +32,13 @@
 
 // Font Mixins
 
+@mixin font-base-thin {
+  @include font-base;
+  font-family: 'Nexa Light', 'Montserrat', 'Helvetica', Helvetica, Arial, sans-serif;
+}
+
 @mixin font-base {
-  font-family: 'Montserrat', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-family: 'Nexa Book', 'Montserrat', 'Helvetica', Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -82,13 +87,18 @@ h1, h2, h3, h4, h5, h6 {
   .view-expeditions-7 & {
     color: #f05323;
   }
+  .view-hi-chew & {
+    color: #0033a0;
+  }
+  .view-typographic-lights & {
+    color: #000;
+  }
 }
 
 h1 {
   &.heading-large {
-    @include font-alt-bold;
+    @include font-base-thin;
     font-size: 2em;
-    text-transform: lowercase;
   }
 }
 
