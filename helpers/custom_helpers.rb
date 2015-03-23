@@ -4,7 +4,7 @@ module CustomHelpers
   end
 
   def active_nav(page)
-  	'class="active"' if current_page?(page) 
+  	'class="nav-link nav-link-active"' if current_page?(page) 
   end
 
   def current_page?(page)
