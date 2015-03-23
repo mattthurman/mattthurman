@@ -5,6 +5,27 @@
   padding: 0 8em;
 }
 
+.pairing {
+  font-size: 0;
+  padding: 10% 0;
+}
+
+.pairing-visual {
+  display: inline-block;
+  font-size: $base-size;
+  margin-right: 5%;
+  vertical-align: middle;
+  width: 70%;
+}
+
+.pairing-description {
+  display: inline-block;
+  font-size: $base-size;
+  vertical-align: middle;
+  width: 25%;
+}
+
+
 .grid-row {
   font-size: 0;
   margin-bottom: 1%;
@@ -32,6 +53,13 @@
     margin-top: 3%;
   }
 }
+
+// 1 Smaller Column {
+  .grid-row-padded {
+    padding: 0 15%;
+    .grid-column {
+    }
+  }
 
 // 2 Uneven Columns
 
