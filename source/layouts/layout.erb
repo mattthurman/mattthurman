@@ -12,6 +12,17 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'vendor/modernizr' %>
 
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#009875">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
   </head>
 
   <body>
@@ -22,13 +33,11 @@
     <%= partial 'header' %>
 
     <main id="main" class="main" role="main">
-      <div class="container">
-        <%= yield %>
-      </div>
+      <%= yield %>
     </main>
 
 
-    <%= partial 'footer' %>
+    <%#= partial 'footer' %>
 
     <%= javascript_include_tag 'application' %>
     
