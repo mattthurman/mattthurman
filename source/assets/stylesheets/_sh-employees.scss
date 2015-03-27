@@ -1,0 +1,83 @@
+// SH Employee Demo - Code by Josh Dean: http://www.joshdean.co/
+// ==========================================================================
+
+.employees {
+  padding-left: 0;
+  text-align: center;
+}
+
+.employee {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+}
+
+  .employee.brian:hover {
+    cursor: image-url('portfolio/saxton-horne/large-cursor.png'), auto;
+  }
+
+  .employee-regular {
+    display: block;
+    height: 16em;
+  }
+
+// Employee Photo - Alternate
+
+.employee-alternate {
+  opacity: 0;
+  position: absolute;
+    top: 0;
+    left: 0;
+  transition: all 0.1s ease-out;
+  z-index: 1;
+}
+
+  .employee:hover > .employee-alternate {
+    opacity: 1;
+  }
+
+// Employee Name
+
+.employee-name {
+  opacity: 0;
+  position: absolute;
+    right: 0;
+    bottom: 98%;
+    left: 50%;
+  transform: translate3d(0,0,0,0);
+  transition: all 0.25s ease-out;
+  z-index: 2;
+} 
+
+  .employee:hover > .employee-name {
+    bottom: 105%;
+    opacity: 1;
+    .no-opacity & {
+      display: block;
+    }
+  }
+
+  .employee-name em {
+    background-color: #e2231a;
+    border-radius: 0.3em;
+    color: #ffffff;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    padding: 0.3em 0.5em;
+    text-transform: uppercase;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+  }
+
+  .employee-name em:after {
+    content:"";
+    display: block;
+    margin-left: -0.6em;
+    position:absolute;
+      bottom: -0.5em;
+      left: 50%;
+    border-top: 0.6em solid #e2231a;
+    border-right: 0.6em solid transparent;
+    border-left: 0.6em solid transparent;
+    width: 0;
+  }

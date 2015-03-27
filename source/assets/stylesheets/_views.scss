@@ -1,30 +1,43 @@
-// Portfolio Page
+// Views - Portfolio Page
 // ==========================================================================
 
 .views {
-  padding: 0 8em;
+  @extend .wrapper;
+  background-color: #ffffff;
+  padding: 4em;
 }
+
+// Hero Pairing
+// ==========================================================================
 
 .pairing {
-  font-size: 0;
-  padding: 10% 0;
+  margin-bottom: 6em;
 }
 
-.pairing-visual {
-  display: inline-block;
-  font-size: $base-size;
-  margin-right: 5%;
-  vertical-align: middle;
-  width: 70%;
-}
+  .pairing-inner {
+    font-size: 0;
+  }
 
-.pairing-description {
-  display: inline-block;
-  font-size: $base-size;
-  vertical-align: middle;
-  width: 25%;
-}
+  .pairing-visual {
+    display: inline-block;
+    font-size: $base-size;
+    margin-right: 5%;
+    vertical-align: middle;
+    width: 70%;
+    & > img {
+      width: 100%;
+    }
+  }
 
+  .pairing-description {
+    display: inline-block;
+    font-size: $base-size;
+    vertical-align: middle;
+    width: 25%;
+  }
+
+// Image Grids
+// ==========================================================================
 
 .grid-row {
   font-size: 0;
@@ -36,6 +49,7 @@
   font-size: $base-size;
   margin-right: 1%;
   vertical-align: top;
+  width: 100%;
   &:last-child {
     margin-right: 0;
   }
@@ -50,15 +64,13 @@
     width: 100%;
   }
   + .grid-cell {
-    margin-top: 3%;
+    margin-top: 2%;
   }
 }
 
 // 1 Smaller Column {
   .grid-row-padded {
     padding: 0 15%;
-    .grid-column {
-    }
   }
 
 // 2 Uneven Columns
@@ -66,9 +78,15 @@
 .grid-row-uneven {
   .grid-column {
     width: 32.4%;
+    .grid-cell + .grid-cell {
+      margin-top: 3%;
+    }
   }
   .grid-column-larger {
     width: 66.6%;
+    .grid-cell + .grid-cell {
+      margin-top: 1.5%;
+    }
   }
 }
 
@@ -79,6 +97,9 @@
   .grid-column {
     width: percentage(0.99/2);
   }
+  .grid-cell + .grid-cell {
+    margin-top: 2%;
+  }
 }
 
 // 3 Even Columns
@@ -87,9 +108,29 @@
   .grid-column {
     width: percentage(0.98/3);
   }
+  .grid-cell + .grid-cell {
+    margin-top: 3%;
+  }
 }
 
+// View Description
+// ==========================================================================
 
-.views-description {
-  padding: 4em 4em 6em;
+.view-description {
+  @include clearfix;
+  margin: 2em 0 6em;
+  padding: 2em 4em 1em;
+  > h2 {
+    margin-bottom: 0.5em;
+  }
+  > p {
+    float: left;
+    width: 50%;
+    &:first-of-type {
+      padding-right: 1em;
+    }
+    + p {
+      padding-left: 1em;
+    }
+  }
 }

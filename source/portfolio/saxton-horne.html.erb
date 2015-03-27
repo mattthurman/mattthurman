@@ -1,65 +1,61 @@
-<section class="views view-7-deadly-sins">
+<section class="views view-saxton-horne">
 
   <div class="grid-row">
     <span class="grid-column">
       <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/hero.jpg' %>
+        <%= image_tag 'portfolio/saxton-horne/hero.jpg' %>
       </div>
     </span>
   </div>
   <div class="view-description">
-    <h1>7 Deadly Sins Foldout</h1>
+    <h1 class="marginless">Saxton Horne Website</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
   </div>
 
-  <div class="grid-row">
+  <div class="grid-row grid-row-uneven">
+    <span class="grid-column grid-column-larger">
+      <div class="grid-cell browser-framed">
+        <%= image_tag 'portfolio/saxton-horne/team.jpg' %>
+      </div>
+    </span>
     <span class="grid-column">
       <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/open-1.jpg' %>
+        <ul class="employees">
+          <li class="employee brian">
+            <span class="employee-name"><em>Brian Mcdonough</em></span>
+              <%= image_tag 'portfolio/saxton-horne/team/brian-mcdonough.jpg', alt: 'Brian Mcdonough', class: 'employee-regular' %>
+              <%= image_tag 'portfolio/saxton-horne/team/brian-mcdonough-alternate.jpg', alt: 'Brian Mcdonough', class: 'employee-alternate' %>
+          </li>
+        </ul>
+      </div>
+      <div class="grid-cell">
+        <ul class="employees">
+          <li class="employee">
+              <%= image_tag 'portfolio/saxton-horne/team/abraham-sloan.jpg', alt: 'Abraham Sloan', class: 'employee-regular' %>
+              <%= image_tag 'portfolio/saxton-horne/team/abraham-sloan-alternate.jpg', alt: 'Abraham Sloan', class: 'employee-alternate' %>
+          </li>
+        </ul>
       </div>
     </span>
   </div>
   <div class="view-description">
-    <h1>7 Deadly Sins Foldout</h1>
+    <h2 class="marginless">Team Page</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
   </div>
 
-  <div class="grid-row grid-row-padded">
+  <div class="grid-row grid-row-halves">
     <span class="grid-column">
       <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/cover.jpg' %>
-      </div>
-      <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/sloth.jpg' %>
-      </div>
-      <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/envy.jpg' %>
-      </div>
-      <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/pride.jpg' %>
-      </div>
-      <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/lust.jpg' %>
-      </div>
-      <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/gluttony.jpg' %>
-      </div>
-      <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/wrath.jpg' %>
-      </div>
-      <div class="grid-cell">
-        <%= image_tag 'portfolio/7-deadly-sins/greed.jpg' %>
+        <%= image_tag 'portfolio/saxton-horne/client-page.jpg' %>
       </div>
     </span>
   </div>
-
   <div class="view-description">
-    <h2 class="marginless">Foldout</h2>
+    <h2 class="marginless">Portfolio Pages</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
   </div>
 
   <p><%= link_to '< Back to Portfolio', '/' %></p>
-
 </section>

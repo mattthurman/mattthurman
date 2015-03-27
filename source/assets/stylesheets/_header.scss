@@ -1,7 +1,8 @@
 .header {
-  border-top: 0.5em solid $color-accent;
-  background-color: #fff;
-  padding: 3em 0 2em;
+  background-color: $color-accent;
+  border-bottom: 0.2em solid #fff;
+  color: #f7f7f7;
+  padding: 1.3em 0 0.7em;
 }
 
 .header a {
@@ -17,9 +18,9 @@
 
 .header-title {
   @include font-alt-bold;
-  color: $color-accent;
+  color: #fff;
   font-size: 2em;
-  line-height: 0.7em;
+  line-height: 1em;
   margin-bottom: 0;
   text-transform: uppercase;
 }

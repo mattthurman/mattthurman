@@ -2,17 +2,6 @@ img {
   max-width: 100%;
 }
 
-figure {
-  box-shadow: inset 0px 1em 0.75em -1em rgba(#000, 0.1);
-  margin: 0;
-  > img {
-    display: block;
-  }
-  > .figcaption {
-    padding: 4em 8em;
-  }
-}
-
 video {
   width: 100%;
 }

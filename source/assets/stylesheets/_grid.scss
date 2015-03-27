@@ -32,10 +32,6 @@ $wrapper-width: 108em; // Change your main area width here
 }
 
 .main {
-  @extend .wrapper;
-  margin: 0 auto;
-}
-
-.container {
   background-color: #fff;
+  margin: 0 auto;
 }

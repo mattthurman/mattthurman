@@ -2,7 +2,12 @@
 // ==========================================================================
 
 .briefs {
+  border-right: 4em solid #282828;
+  border-left: 4em solid #282828;
   list-style-type: none;
+}
+
+.briefs-inner {
   font-size: 0;
   padding-left: 0;
 }
@@ -21,10 +26,6 @@
     margin-right: 0;
     width: 100%;
   }
-}
-
-.brief.subdued {
-  // transform: scale(0.8);
 }
 
 .brief-inner {
@@ -89,7 +90,7 @@
     }
   }
 
-  .brief-arcadia-rebrand {
+  .brief-arcadia {
     color: #fff;
     &:hover .brief-inner:after {
       background: linear-gradient(45deg, rgba(#000, 0.1) 10%, rgba(#000, 0) 100%);
@@ -153,15 +154,9 @@
     }
   }
 
-  
-
-
-
-
 .brief-visual {
   backface-visibility: hidden;
-  max-height: 100%;
-  max-width: 100%;
+  width: 100%;
   position: absolute;
     top: 0;
     left: 0;
