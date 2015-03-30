@@ -94,16 +94,18 @@ $wrapper-width: 108em; // Change your main area width here
   }
 }
 
-@each $title, $color in (expeditions-7: #f05323, hi-chew: #0033a0) {
+@each $title, $color in (expeditions-7: #f05323, hi-chew: #0033a0, typographic-phrase: #b33140, typographic-lights: #000, arcadia: #f28c32, 7-deadly-sins: #000, the-other-firm: #dfa21f, saxton-horne: #e2231a, design-movements: #3497a3) {
   .brief-#{$title} {
     color: $color;
+    &:after {
+      background: linear-gradient(45deg, rgba($color, 0) 10%, rgba($color, 0.2) 100%);
+    }
+    &:hover:after {
+      box-shadow: inset 1em 0 0 0 $color;
+    }
   }
   .view-#{$title} {
     color: $color;
-    &:hover:after {
-      background: linear-gradient(45deg, rgba($color, 0) 10%, rgba($color, 0.2) 100%);
-      box-shadow: inset 1em 0 0 0 $color;
-    }
   }
 }
 
