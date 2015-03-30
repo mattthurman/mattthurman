@@ -34,4 +34,174 @@ $wrapper-width: 108em; // Change your main area width here
 .main {
   background-color: #fff;
   margin: 0 auto;
+  padding: 4em 0;
+}
+
+// Briefs
+// ==========================================================================
+
+.briefs {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.brief {
+  background-color: $color-base-lighter;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: '';
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 4;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+}
+
+.brief-visual {
+  backface-visibility: hidden;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0, 0);
+  .brief:hover & {
+    transform: translate(2%, 0);
+  }
+}
+
+.brief-title {
+  display: block;
+  font-size: 1.6em;
+  line-height: 1.1;
+  margin-bottom: 0;
+  opacity: 0;
+  position: absolute;
+    bottom: 0.4em;
+    left: 0.4em;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+  .brief:hover & {
+    opacity: 1;
+    left: 1.4em;
+  }
+}
+
+@each $title, $color in (expeditions-7: #f05323, hi-chew: #0033a0) {
+  .brief-#{$title} {
+    color: $color;
+  }
+  .view-#{$title} {
+    color: $color;
+    &:hover:after {
+      background: linear-gradient(45deg, rgba($color, 0) 10%, rgba($color, 0.2) 100%);
+      box-shadow: inset 1em 0 0 0 $color;
+    }
+  }
+}
+
+// Image Grid
+// ==========================================================================
+
+.row {
+  font-size: 0;
+  margin-bottom: 1%;
+}
+
+.column {
+  display: inline-block;
+  font-size: $base-size;
+  margin-right: 1%;
+  vertical-align: top;
+  width: 100%;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.cell {
+  display: block;
+  width: 100%;
+  & > img,
+  & > video {
+    display: block;
+    width: 100%;
+  }
+  + .cell {
+    margin-top: 2%;
+  }
+}
+
+// 1 Smaller Column {
+  .row-padded {
+    padding: 0 15%;
+  }
+
+// 2 Uneven Columns
+
+.row-uneven {
+  .column {
+    width: 32.4%;
+    .cell + .cell {
+      margin-top: 3%;
+    }
+  }
+  .column-larger {
+    width: 66.6%;
+    .cell + .cell {
+      margin-top: 1.5%;
+    }
+  }
+}
+
+
+// 2 Even Columns
+
+.row-halves {
+  .column {
+    width: percentage(0.99/2);
+  }
+  .cell + .cell {
+    margin-top: 2%;
+  }
+}
+
+// 3 Even Columns
+
+.row-thirds {
+  .column {
+    width: percentage(0.98/3);
+  }
+  .cell + .cell {
+    margin-top: 3%;
+  }
+}
+
+// Description
+// ==========================================================================
+
+.description {
+  @include clearfix;
+  margin: 2em 0 6em;
+  padding: 2em 4em 1em;
+  > h2 {
+    margin-bottom: 0.5em;
+  }
+  > p {
+    float: left;
+    width: 50%;
+    &:first-of-type {
+      padding-right: 1em;
+    }
+    + p {
+      padding-left: 1em;
+    }
+  }
 }
