@@ -3,6 +3,9 @@
   border-bottom: 0.2em solid #fff;
   color: #f7f7f7;
   padding: 1.3em 0 0.7em;
+  @include under($goldilocks) {
+    text-align: center;
+  }
 }
 
 .header a {
@@ -14,6 +17,9 @@
   font-size: $base-size;
   margin-bottom: 0;
   width: 50%;
+  @include under($goldilocks) {
+    width: 100%;
+  }
 }
 
 .header-title {
@@ -23,4 +29,13 @@
   line-height: 1em;
   margin-bottom: 0;
   text-transform: uppercase;
+  @include under($goldilocks) {
+    font-size: 1.8em;
+  }
+}
+
+.header-subtitle {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  letter-spacing: 0.05em;
 }

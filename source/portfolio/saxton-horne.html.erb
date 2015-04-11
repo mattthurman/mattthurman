@@ -9,8 +9,29 @@
   </div>
   <div class="description">
     <h1 class="marginless">Saxton Horne Website</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <p>Saxton Horne is an advertising and communication agency based in Sandy, Utah. With services from mailers to social media, they serve clients from a wide spectrum of industries including automotive, sports, and entertainment.</p>
+    <p>They wanted an expressive and unique look. Most importantly, they needed a place to showcase their best work to make a powerful first impression.</p>
+    <div class="info">
+      <ul>
+        Branding by:
+        <li><%= link_to 'Brian McDonough', 'https://www.linkedin.com/pub/brian-mcdonough/58/b0b/134', target: '_blank' %></li>
+      </ul>
+      <ul>
+        Illustrations by:
+        <li><%= link_to 'Connary Fagen', 'http://www.connary.com/', target: '_blank' %></li>
+      </ul>
+      <ul>
+        Additional design by:
+        <li><%= link_to 'James Kenison', 'https://www.behance.net/jameskenison', target: '_blank' %>,</li>
+        <li><%= link_to 'Connary Fagen', 'http://www.connary.com/', target: '_blank' %>,</li>
+        <li><%= link_to 'Jacob Russell', 'http://iamjacobrussell.com/', target: '_blank' %>,</li>
+        <li>and others</li>
+      </ul>
+      <ul>
+        Front-end dev by:
+        <li><%= link_to 'Josh Dean', 'http://www.joshdean.co/', target: '_blank' %></li>
+      </ul>
+    </div>
   </div>
 
   <div class="row row-uneven">
@@ -24,16 +45,17 @@
         <ul class="employees">
           <li class="employee brian">
             <span class="employee-name"><em>Brian Mcdonough</em></span>
-              <%= image_tag 'portfolio/saxton-horne/team/brian-mcdonough.jpg', alt: 'Brian Mcdonough', class: 'employee-regular' %>
-              <%= image_tag 'portfolio/saxton-horne/team/brian-mcdonough-alternate.jpg', alt: 'Brian Mcdonough', class: 'employee-alternate' %>
+            <%= image_tag 'portfolio/saxton-horne/team/brian-mcdonough.jpg', alt: 'Brian Mcdonough', class: 'employee-regular' %>
+            <%= image_tag 'portfolio/saxton-horne/team/brian-mcdonough-alternate.jpg', alt: 'Brian Mcdonough', class: 'employee-alternate' %>
           </li>
         </ul>
       </div>
       <div class="cell">
         <ul class="employees">
           <li class="employee">
-              <%= image_tag 'portfolio/saxton-horne/team/abraham-sloan.jpg', alt: 'Abraham Sloan', class: 'employee-regular' %>
-              <%= image_tag 'portfolio/saxton-horne/team/abraham-sloan-alternate.jpg', alt: 'Abraham Sloan', class: 'employee-alternate' %>
+            <span class="employee-name"><em>Abraham Sloan</em></span>
+            <%= image_tag 'portfolio/saxton-horne/team/abraham-sloan.jpg', alt: 'Abraham Sloan', class: 'employee-regular' %>
+            <%= image_tag 'portfolio/saxton-horne/team/abraham-sloan-alternate.jpg', alt: 'Abraham Sloan', class: 'employee-alternate' %>
           </li>
         </ul>
       </div>
@@ -41,11 +63,26 @@
   </div>
   <div class="description">
     <h2 class="marginless">Team Page</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <p>A company is only as good as the people that are a part of it. We wanted to not only show the face of the talented designers, copywriters, account managers, etc; but also give them the recognition they deserved.</p>
+    <p>For each team member, a unique rollover state was created to give the viewer a glimpse into their personality and style.</p>
   </div>
 
-  <div class="row row-halves">
+  <div class="row row-padded">
+    <span class="column">
+      <div class="cell browser-framed">
+        <%= image_tag 'portfolio/saxton-horne/blog-previews.jpg' %>
+      </div>
+    </span>
+  </div>
+  <div class="row row-padded margin-large">
+    <span class="column">
+      <div class="cell browser-framed">
+        <%= image_tag 'portfolio/saxton-horne/portfolio-brief.jpg' %>
+      </div>
+    </span>
+  </div>
+
+  <div class="row row-padded">
     <span class="column">
       <div class="cell">
         <%= image_tag 'portfolio/saxton-horne/client-page.jpg' %>
@@ -53,8 +90,9 @@
     </span>
   </div>
   <div class="description">
-    <h2 class="marginless">Portfolio Pages</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <h2 class="marginless">Client Pages</h2>
+    <p>Saxton Horne, being a full-service agency, created many amazing full campaigns. Individual pieces couldn't do these comprehensive campaigns justice.</p>
+    <p>For every client in the portfolio, we developed a unique layout to display clusters of work.</p>
   </div>
 
   <p><%= link_to '< Back to Portfolio', '/' %></p>

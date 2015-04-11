@@ -1,0 +1,35 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3002702, 2015-04-02T15:45:47-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: NexaSlab-Bold by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/nexa-slab/bold/
+ * Copyright: Copyright (c) 2013 by Fontfabric. All rights reserved.
+ * 
+ * Webfont: NexaBook by Fontfabric
+ * URL: http://www.myfonts.com/fonts/font-fabric/nexa/book/
+ * Copyright: Copyright (c) 2012 by Fontfabric LLC. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3002702
+ * Licensed pageviews: 20,000
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2dd14e");
+
+  
+@font-face {font-family: 'NexaSlab-Bold';src: url('webfonts/2DD14E_0_0.eot');src: url('webfonts/2DD14E_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2DD14E_0_0.woff2') format('woff2'),url('webfonts/2DD14E_0_0.woff') format('woff'),url('webfonts/2DD14E_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NexaBook';src: url('webfonts/2DD14E_1_0.eot');src: url('webfonts/2DD14E_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2DD14E_1_0.woff2') format('woff2'),url('webfonts/2DD14E_1_0.woff') format('woff'),url('webfonts/2DD14E_1_0.ttf') format('truetype');}
+ 

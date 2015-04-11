@@ -10,8 +10,11 @@ html {
 }
 
 body {
-  background-color: #282828;
+  background-color: $color-base-light;
   overflow-x: hidden;
+  @include under($goldilocks) {
+    background-color: $color-base-lighter;
+  }
 }
 
 // Main
@@ -23,11 +26,17 @@ $wrapper-width: 108em; // Change your main area width here
   margin: 0 auto;
   padding: 0 4em;
   max-width: $wrapper-width;
+  @include under($mamabear) {
+    padding: 0 2em;
+  }
+  @include under(65em) {
+    padding: 0 3em;
+  }
   @include under($goldilocks) {
-    padding: 0 4em;
+    padding: 0 2em;
   }
   @include under($babybear) {
-    padding: 0 2em;
+    padding: 0 1em;
   }
 }
 
@@ -35,6 +44,9 @@ $wrapper-width: 108em; // Change your main area width here
   background-color: #fff;
   margin: 0 auto;
   padding: 4em 0;
+  @include under($babybear) {
+    padding: 1em 0;
+  }
 }
 
 // Briefs
@@ -43,10 +55,15 @@ $wrapper-width: 108em; // Change your main area width here
 .briefs {
   padding-left: 0;
   list-style-type: none;
+  @include under($babybear) {
+    // margin-left: -1rem;
+    // margin-right: -1rem;
+  }
 }
 
 .brief {
   background-color: $color-base-lighter;
+  cursor: pointer;
   overflow: hidden;
   position: relative;
   &:after {
@@ -65,6 +82,15 @@ $wrapper-width: 108em; // Change your main area width here
   &:hover:after {
     opacity: 1;
   }
+}
+
+.brief-inner {
+  display: block;
+  height: 100%;
+  position: absolute;
+    top: 0;
+    left: 0;
+  width: 100%;
 }
 
 .brief-visual {
@@ -97,6 +123,7 @@ $wrapper-width: 108em; // Change your main area width here
 @each $title, $color in (expeditions-7: #f05323, hi-chew: #0033a0, typographic-phrase: #b33140, typographic-lights: #000, arcadia: #f28c32, 7-deadly-sins: #000, the-other-firm: #dfa21f, saxton-horne: #e2231a, design-movements: #3497a3) {
   .brief-#{$title} {
     color: $color;
+    padding-bottom: percentage(image-height('portfolio/#{$title}/hero.jpg') / image-width('portfolio/#{$title}/hero.jpg'));
     &:after {
       background: linear-gradient(45deg, rgba($color, 0) 10%, rgba($color, 0.2) 100%);
     }
@@ -105,8 +132,17 @@ $wrapper-width: 108em; // Change your main area width here
     }
   }
   .view-#{$title} {
-    color: $color;
+    h1, h2, h3, h4, h5, h6 {
+      color: $color;
+    }
   }
+}
+
+// Views
+// ==========================================================================
+
+.views {
+  
 }
 
 // Image Grid
@@ -115,6 +151,9 @@ $wrapper-width: 108em; // Change your main area width here
 .row {
   font-size: 0;
   margin-bottom: 1%;
+  &.margin-large {
+    margin-bottom: 3%;
+  }
 }
 
 .column {
@@ -143,7 +182,9 @@ $wrapper-width: 108em; // Change your main area width here
 
 // 1 Smaller Column {
   .row-padded {
-    padding: 0 15%;
+    @include over($goldilocks) {
+      padding: 0 15%;
+    }
   }
 
 // 2 Uneven Columns
@@ -173,6 +214,12 @@ $wrapper-width: 108em; // Change your main area width here
   .cell + .cell {
     margin-top: 2%;
   }
+  @include under(65em) {
+    .column {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
 }
 
 // 3 Even Columns
@@ -191,19 +238,55 @@ $wrapper-width: 108em; // Change your main area width here
 
 .description {
   @include clearfix;
-  margin: 2em 0 6em;
-  padding: 2em 4em 1em;
+  margin-bottom: 4rem;
+  padding: 2em 4em 3em;
   > h2 {
     margin-bottom: 0.5em;
   }
-  > p {
-    float: left;
-    width: 50%;
-    &:first-of-type {
-      padding-right: 1em;
+  @include over($goldilocks) {
+    > p {
+      float: left;
+      width: 50%;
+      &:first-of-type {
+        padding-right: 1em;
+      }
+      + p {
+        padding-left: 1em;
+      }
     }
-    + p {
-      padding-left: 1em;
+  }
+  @include under($goldilocks) {
+    margin-bottom: 1rem;
+    padding: 1em 0 0.5em;
+  }
+  @include under($babybear) {
+    font-size: 1.1em;
+  }
+}
+
+// More info
+// ==========================================================================
+
+.info {
+  clear: both;
+  color: darken($color-base, 20%);
+  font-size: 0.8em;
+  > ul {
+  display: inline-block;
+  margin: 0.2rem 2rem 0.2rem 0;
+  padding-left: 0;
+    > li {
+      display: inline-block;
     }
   }
 }
+
+// Hide
+// ==========================================================================
+
+.hide {
+  @include under($goldilocks) {
+    display: none;
+  }
+}
+

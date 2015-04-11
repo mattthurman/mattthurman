@@ -8,56 +8,56 @@
     </span>
   </div>
   <div class="description">
-    <h1>Expeditions-7 Website</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <h1>Expeditions 7 Website</h1>
+    <p><%= link_to 'Expeditions 7', 'http://www.expeditions7.com', target: '_blank' %> is the story of a great undertaking by a group of Toyota Land Cruiser enthusiasts to set a world recod. Their goal, which has since been accomplished, was to drive the same vehicles on every continent of the world.</p>
+    <p>They wanted a site that would tell the grand story and document every step of their three-year journey.</p>
+    <div class="info">
+      <ul>
+        Branding by:
+        <li><%= link_to 'Brian McDonough', 'https://www.linkedin.com/pub/brian-mcdonough/58/b0b/134', target: '_blank' %>,</li>
+        <li><%= link_to 'Blake Simkins', 'http://www.blakesimkins.com/', target: '_blank' %></li>
+      </ul>
+      <ul>
+        Video and Photography by:
+        <li><%= link_to 'Bruce Dorn', 'https://vimeo.com/brucedorn', target: '_blank' %>,</li>
+        <li><%= link_to 'Abraham Sloan', 'https://www.linkedin.com/pub/abraham-sloan/4/215/902', target: '_blank' %>,</li>
+        <li>and others</li>
+      </ul>
+    </div>
   </div>
 
-  <!-- <div class="pairing">
-    <div class="pairing-inner">
-      <div class="pairing-visual">
-        <%= image_tag 'portfolio/expeditions-7/hero.jpg' %>
-      </div>
-
-      <div class="pairing-description">
-        <h2>Expeditions 7 Website</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="row row-uneven">
+  <div class="row row-uneven hide">
     <span class="column">
       <div class="cell">
         <video autoplay="autoplay" loop muted>
-          <source src="http://e7-staging.herokuapp.com/assets/thumbnails/north-america-0ff89d015526f47bd0c93fa850d3595d.mp4" type="video/mp4">
-          <%= image_tag 'http://e7-staging.herokuapp.com/assets/thumbnails/north-america-0ff89d015526f47bd0c93fa850d3595d.mp4' %>
+          <source src="<%= image_path 'portfolio/expeditions-7/thumbnails/north-america.mp4' %>" type="video/mp4">
+          <%= image_tag 'portfolio/expeditions-7/thumbnails/north-america.jpg' %>
         </video>
       </div>
       <div class="cell">
         <video autoplay="autoplay" loop muted>
-          <source src="http://e7-staging.herokuapp.com/assets/thumbnails/russia-siberia-f9e4724e16e3a6795434bc07b9b39a9c.mp4" type="video/mp4">
-          <%= image_tag 'http://e7-staging.herokuapp.com/assets/thumbnails/north-america-9358a58bc127b676ebcb0205a620bd6f.jpg' %>
+          <source src="<%= image_path 'portfolio/expeditions-7/thumbnails/russia-siberia.mp4' %>" type="video/mp4">
+          <%= image_tag 'portfolio/expeditions-7/thumbnails/russia-siberia.jpg' %>
         </video>
       </div>
     </span>
     <span class="column column-larger">
       <div class="cell">
         <video autoplay="autoplay" loop muted>
-          <source src="http://e7-staging.herokuapp.com/assets/thumbnails/australia-07c6193129e22ddd75c93b8332970eca.mp4" type="video/mp4">
-          <%= image_tag 'http://e7-staging.herokuapp.com/assets/thumbnails/north-america-9358a58bc127b676ebcb0205a620bd6f.jpg' %>
+          <source src="<%= image_path 'portfolio/expeditions-7/thumbnails/australia.mp4' %>" type="video/mp4">
+          <%= image_tag 'portfolio/expeditions-7/thumbnails/australia.jpg' %>
         </video>
       </div>
     </span>
   </div>
-  <div class="description">
+  <div class="description hide">
     <h2>Cinemagraphs</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <p>Inspired by the amazing scenes captured by some world-class photographers and videographers, I created a set of cinemagraphs to give life to the otherwise static thumbnails.</p>
+    <p>One was created for each continent, from the sand dunes of Africa to the snow drifts in Antarctica.</p>
   </div>
 
   <div class="row">
-    <span class="column column-large">
+    <span class="column">
       <div class="view">
         <%= image_tag 'portfolio/expeditions-7/stamps.png' %>
       </div>
@@ -65,7 +65,7 @@
   </div>
   <div class="description">
     <h2>Blog Time Stamps</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <p>As the adventure moved from one continent to the next, the Expeditions 7 Blog acted as a journal for the travelers. For each entry, a dynamic time stamp displayed the location in the style of a passport stamp.</p>
   </div>
 
   <div class="row row-uneven">
@@ -87,7 +87,7 @@
 
   <div class="description">
     <h2>Interactive Maps</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <p>And of course, you can't tell the story of such an ambitious journey without saying (or showing) where it went. To do this, we developed interactive styled maps to show exactly where the adventurers went.</p>
   </div>
 
   <div class="row row-full">
@@ -100,25 +100,7 @@
 
   <div class="description">
     <h2>Photo Grid</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
-  </div>
-
-  <div class="row row-halves">
-    <span class="column">
-      <div class="view">
-        <%= image_tag 'http://e7-staging.herokuapp.com/assets/thumbnails/australia-9efaeafce41b82bb9c26a1bdd3986294.jpg' %>
-      </div>
-    </span>
-    <span class="column">
-      <div class="view">
-        <%= image_tag 'http://e7-staging.herokuapp.com/assets/thumbnails/russia-siberia-2a5c1f48931c101fe537425d522aa268.jpg' %>
-      </div>
-    </span>
-  </div>
-
-  <div class="description">
-    <h2>Description</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus consequatur quod, totam illo, ad officiis veniam ab maiores soluta. Incidunt praesentium laudantium numquam asperiores non, maiores vero. Nulla, mollitia, tempore!</p>
+    <p>With terabytes of photos, selecting only a handful for each segment was no easy task. Galleries were composed using photos that best represent the <i>color</i> of each contient.</p>
   </div>
 
   <p><%= link_to '< Back to Portfolio', '/' %></p>

@@ -1,5 +1,5 @@
 <li class="cell brief brief-<%= title.parameterize %>">
-  <% link_to "/portfolio/#{title.parameterize}" do %>
+  <% link_to "/portfolio/#{title.parameterize}", class: 'brief-inner' do %>
     <%= image_tag "portfolio/#{title.parameterize}/hero.jpg", class: "brief-visual" %>
   <% end %>
   <h2 class="brief-title"><%= title %></h2>

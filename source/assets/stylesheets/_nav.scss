@@ -1,8 +1,14 @@
 .nav {
-  float: right;  
+  float: right;
+  @include under($goldilocks) {
+    float: none;
+  }
 }
 
 .nav-links {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  letter-spacing: 0.05em;
   list-style-type: none;
   padding-left: 0;
 }
@@ -10,6 +16,9 @@
 .nav-link {
   display: inline-block;
   margin-right: 2em;
+  @include under($goldilocks) {
+    margin: 0 1em;
+  }
 }
 
 .nav-link:active {
@@ -25,9 +34,6 @@
       border-bottom: 1px solid currentColor;
       bottom: -0.1em;
     }
-  }
-  &:visited {
-
   }
   &:after {
     content: '';
