@@ -138,13 +138,6 @@ $wrapper-width: 108em; // Change your main area width here
   }
 }
 
-// Views
-// ==========================================================================
-
-.views {
-  
-}
-
 // Image Grid
 // ==========================================================================
 
@@ -233,12 +226,46 @@ $wrapper-width: 108em; // Change your main area width here
   }
 }
 
+// 1 Scrolling Row
+
+@keyframes bob-sideways {
+  0%   {transform: translate(1em,  0);}
+  5%   {transform: translate(1em,  0);}
+  52%  {transform: translate(-1em, 0);}
+  57%  {transform: translate(-1em, 0);}
+  100% {transform: translate(1em,  0);}
+}
+
+
+.row-scroll {
+  position: relative;
+  &:after {
+    animation: bob-sideways 2s ease-in-out infinite;
+    content: "Scroll >";
+    display: block;
+    font-size: $base-size * 1.5;
+    padding: 0.1rem 1rem;
+    text-align: center;
+    @include under($goldilocks) {font-size: $base-size}
+  }
+  .column {
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+  }
+  .cell {
+    width: 250%;
+    @include under($mamabear)   {width: 300%;}
+    @include under($goldilocks) {width: 500%;}
+    @include under($babybear)   {width: 700%;}
+  }
+}
+
 // Description
 // ==========================================================================
 
 .description {
   @include clearfix;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   padding: 2em 4em 3em;
   > h2 {
     margin-bottom: 0.5em;
